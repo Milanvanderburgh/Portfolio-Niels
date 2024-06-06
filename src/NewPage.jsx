@@ -21,7 +21,7 @@ function NewPage({ setCurrentPage, currentPage }) {
         {currentPage === "Myself" && (
           <div className='d-flex flex-column justify-content-center h-100'>
             <div className="scrollingFrame h-75 mb-2">
-              <img src="/images/Myself.png" alt="" className='w-100' height={350} width={700} />
+              <img src="images/Myself.png" alt="" className='w-100' height={350} width={700} />
               <h2 className='text-center mt-3'>Myself</h2>
               <p>
                 I am 19 years old and live in Zeeland. I'm currently studying to become a Software Developer because I love coding. My goal is to become a skilled Software Developer and create anything I need.
@@ -38,7 +38,7 @@ function NewPage({ setCurrentPage, currentPage }) {
         {currentPage === "Experience" && (
           <div className='d-flex flex-column justify-content-center h-100'>
             <div className="scrollingFrame h-75 mb-2">
-              <img src="/images/Experience.png" className='w-100' alt="" height={350} width={700}/>
+              <img src="images/Experience.png" className='w-100' alt="" height={350} width={700}/>
               <h2 className='text-center mt-3'>Experience</h2>
               <h5 className='mainColor'>Internship Unitron</h5>
               <p>During my third-year internship at Unitron in IJzendijke, I had a rewarding experience as a software developer. Working on enhancing the RMA software allowed me to dive deep into the Django framework, gaining valuable insights and skills along the way. The hands-on experience and guidance from the team helped me grow professionally and reinforced my passion for software development.</p>
@@ -56,7 +56,7 @@ function NewPage({ setCurrentPage, currentPage }) {
         {currentPage === "Skills" && (
           <div className='d-flex flex-column justify-content-center h-100'>
             <div className="scrollingFrame h-75 mb-2">
-              <img src="/images/Skills.png" className='w-100' alt="" height={350} width={700} />
+              <img src="images/Skills.png" className='w-100' alt="" height={350} width={700} />
               <h2 className='text-center mt-3'>Skills</h2>
               <h5 className='mainColor'>Back-End</h5>
               <p>In the back-end realm, I've gained proficiency in Java, SQL, Python, and various frameworks like Hibernate, Struts, and Django. These skills enable me to develop robust and efficient server-side applications, handle data management effectively, and create dynamic web solutions.</p>
