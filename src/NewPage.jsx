@@ -18,10 +18,12 @@ function NewPage({ setCurrentPage, currentPage }) {
   return (
     <>
       <div id='newPage' className="d-flex flex-column align-items-center justify-content-center gap-3 w-50 mx-auto px-5">
+        <hr className="line lineLeft position-absolute"></hr>
+        <hr className="line lineRight position-absolute"></hr>
         <StyledButton text="Go back" className="position-absolute top-0 start-0 px-5 m-5" onClick={() => setCurrentPage("Home")} />
         {currentPage === "Myself" && (
           <div className='d-flex flex-column justify-content-center h-100'>
-            <div className="scrollingFrame h-75 mb-2">
+            <div className="scrollingFrame h-75 mb-2 bg-black">
               <img src="images/Myself.png" alt="" className='w-100' height={350} width={700} />
               <h2 className='text-center mt-3'>Myself</h2>
               <p>
@@ -38,7 +40,7 @@ function NewPage({ setCurrentPage, currentPage }) {
         )}
         {currentPage === "Experience" && (
           <div className='d-flex flex-column justify-content-center h-100'>
-            <div className="scrollingFrame h-75 mb-2">
+            <div className="scrollingFrame h-75 mb-2 bg-black">
               <img src="images/Experience.png" className='w-100' alt="" height={350} width={700} />
               <h2 className='text-center mt-3'>Experience</h2>
               <h5 className='mainColor'>Internship Unitron</h5>
@@ -56,7 +58,7 @@ function NewPage({ setCurrentPage, currentPage }) {
         )}
         {currentPage === "Skills" && (
           <div className='d-flex flex-column justify-content-center h-100'>
-            <div className="scrollingFrame h-75 mb-2">
+            <div className="scrollingFrame h-75 mb-2 bg-black">
               <img src="images/Skills.png" className='w-100' alt="" height={350} width={700} />
               <h2 className='text-center mt-3'>Skills</h2>
               <h5 className='mainColor'>Back-End</h5>
@@ -71,7 +73,7 @@ function NewPage({ setCurrentPage, currentPage }) {
         {/* Project */}
         {currentPage !== "Myself" && currentPage !== "Experience" && currentPage !== "Skills" && (
           <div className='d-flex flex-column justify-content-center'>
-            <div className="scrollingFrame h-75 mb-2">
+            <div className="scrollingFrame h-75 mb-2 bg-black">
               <span className='d-flex flex-column align-items-center'>
               <ProjectImage project={project}/>
               </span>
