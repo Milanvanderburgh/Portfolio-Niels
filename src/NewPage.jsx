@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 import StyledButton from './components/StyledButton';
 import ProjectElement from './components/ProjectElement';
+import ProjectImage from './components/ProjectImage';
 import AboutElement from './components/AboutElement';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane } from '@fortawesome/free-regular-svg-icons'
@@ -38,7 +39,7 @@ function NewPage({ setCurrentPage, currentPage }) {
         {currentPage === "Experience" && (
           <div className='d-flex flex-column justify-content-center h-100'>
             <div className="scrollingFrame h-75 mb-2">
-              <img src="images/Experience.png" className='w-100' alt="" height={350} width={700}/>
+              <img src="images/Experience.png" className='w-100' alt="" height={350} width={700} />
               <h2 className='text-center mt-3'>Experience</h2>
               <h5 className='mainColor'>Internship Unitron</h5>
               <p>During my third-year internship at Unitron in IJzendijke, I had a rewarding experience as a software developer. Working on enhancing the RMA software allowed me to dive deep into the Django framework, gaining valuable insights and skills along the way. The hands-on experience and guidance from the team helped me grow professionally and reinforced my passion for software development.</p>
@@ -67,11 +68,12 @@ function NewPage({ setCurrentPage, currentPage }) {
             </div>
           </div>
         )}
+        {/* Project */}
         {currentPage !== "Myself" && currentPage !== "Experience" && currentPage !== "Skills" && (
           <div className='d-flex flex-column justify-content-center'>
             <div className="scrollingFrame h-75 mb-2">
               <span className='d-flex flex-column align-items-center'>
-                <img src={project.image} alt="" className='w-100' width={700} />
+              <ProjectImage project={project}/>
               </span>
               <h2 className='mt-4'>{project.title}</h2>
               <p>{project.pageDescription}</p>

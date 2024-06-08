@@ -21,6 +21,9 @@ function App({ currentPage, setCurrentPage }) {
 
   const [activeSection, setActiveSection] = useState(null);
   const [viewAll, setViewAll] = useState(false);
+  const [viewOthers, setViewOthers] = useState(false);
+
+  const hasOtherProjects = projects.some(project => project.type !== undefined);
 
   useEffect(() => {
     const options = {
@@ -92,21 +95,17 @@ function App({ currentPage, setCurrentPage }) {
       <div ref={projectsPage} id='projectsPage' className="page position-relative">
         <h1 className='text-center title'>Projects</h1>
         <div className="row gap-5 justify-content-center">
-          {projects.slice(0, viewAll ? projects.length : settings.maxProjects).map((project, index) => (
+          {projects.slice(0, viewAll ? projects.length : settings.maxProjects).filter(project => viewOthers || project.type === undefined).map((project, index) => (
             <ProjectElement
               key={index}
               project={project}
-              image={project.image}
-              alt={project.alt}
-              title={project.title}
-              description={project.description}
-              labels={project.labels}
               setCurrentPage={() => setCurrentPage(index)}
             />
           ))}
         </div>
         <div className="d-flex">
-          {projects.length != settings.maxProjects ? <StyledButton text={viewAll ? "View less" : "View all"} className="px-5 mx-auto mt-4" onClick={() => setViewAll(!viewAll)} /> : ""}
+          {projects.length != settings.maxProjects && !viewOthers ? <StyledButton text={viewAll ? "View less" : "View all"} className="px-5 mx-auto mt-4" onClick={() => setViewAll(!viewAll)} /> : ""}
+          {viewAll && hasOtherProjects ? <StyledButton text={viewOthers ? "View related projects" : "View non related projects"} className="px-5 mx-auto mt-4" onClick={() => setViewOthers(!viewOthers)} /> : ""}
         </div>
         <hr className="line lineLeft position-absolute"></hr>
         <hr className="line lineRight position-absolute"></hr>

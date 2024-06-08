@@ -91,6 +91,11 @@ body {
   background: $mainColor; 
 }
 
+.label{
+  background-color: $mainColor;
+  border-radius: 8px;
+}
+
 // Navigation
 #navigation{
   transform: translateY(-50%);
@@ -302,7 +307,7 @@ body {
     padding: 20px;
   }
   #projectsPage{
-    margin-top: 100%;
+    margin-top: 650px;
   }
   #homePage .imageContainer {
     display: none;
