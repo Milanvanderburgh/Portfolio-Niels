@@ -92,9 +92,9 @@ function App({ currentPage, setCurrentPage }) {
       </div>
 
       {/* Projects */}
-      <div id='projectsPage' className="page position-relative">
+      <div ref={projectsPage} id='projectsPage' className="page position-relative">
         <h1 className='text-center title'>Projects</h1>
-        <div ref={projectsParent} className="row gap-5 justify-content-center">
+        <div className="row gap-5 justify-content-center">
           {projects.slice(0, viewAll ? projects.length : settings.maxProjects).filter(project => viewOthers || project.type === undefined).map((project, index) => (
             <ProjectElement
               key={index}
