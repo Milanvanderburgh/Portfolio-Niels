@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect, useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
@@ -24,7 +25,6 @@ function App({ currentPage, setCurrentPage }) {
   const [viewOthers, setViewOthers] = useState(false);
 
   const hasOtherProjects = projects.some(project => project.type !== undefined);
-
   useEffect(() => {
     const options = {
       root: null,
@@ -92,9 +92,9 @@ function App({ currentPage, setCurrentPage }) {
       </div>
 
       {/* Projects */}
-      <div ref={projectsPage} id='projectsPage' className="page position-relative">
+      <div id='projectsPage' className="page position-relative">
         <h1 className='text-center title'>Projects</h1>
-        <div className="row gap-5 justify-content-center">
+        <div ref={projectsParent} className="row gap-5 justify-content-center">
           {projects.slice(0, viewAll ? projects.length : settings.maxProjects).filter(project => viewOthers || project.type === undefined).map((project, index) => (
             <ProjectElement
               key={index}
