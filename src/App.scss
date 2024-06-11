@@ -219,6 +219,7 @@ body {
 #projectsPage .projectElement img {
   width: 100%;
   border-radius: 6px 6px 0 0;
+  object-fit: cover;
 }
 
 #projectsPage .projectElement:hover {
@@ -231,7 +232,7 @@ body {
 .projectElement {
   border: solid 4px $secondaryColor;
   padding: 0;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: $transition;
 }
 

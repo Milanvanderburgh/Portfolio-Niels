@@ -34,7 +34,7 @@ function NewPage({ setCurrentPage, currentPage }) {
                 I believe in balancing work and play to maintain a well-rounded life. I find joy in collaborating with others and am always eager to learn new things and take on challenges. My passion for technology drives me to constantly improve my skills, and my dedication to my studies and hobbies helps me stay motivated and inspired. Ultimately, I aim to combine my technical expertise with my creative interests to make a positive impact in the software development field.</p>
             </div>
             <div className="d-flex gap-5">
-              <StyledButton text="My CV" className="px-5 ms-auto" onClick={() => window.open('/CV.pdf', '_blank')} />
+              <StyledButton text="My CV" className="px-5 ms-auto" onClick={() => window.open('./CV.pdf', '_blank')} />
             </div>
           </div>
         )}
@@ -82,8 +82,8 @@ function NewPage({ setCurrentPage, currentPage }) {
               <p className='fst-italic'>{project.labels}</p>
             </div>
             <div className="d-flex justify-content-end gap-3">
-              {project.link1.link ? <StyledButton text={project.link1.name} className="px-5" onClick={() => window.open(project.link1.link, '_blank')} /> : ""}
-              {project.link2.link ? <StyledButton text={project.link2.name} className="px-5" onClick={() => window.open(project.link2.link, '_blank')} /> : ""}
+              {'link1' in project ? <StyledButton text={project.link1.name} className="px-5" onClick={() => window.open(project.link1.link, '_blank')} /> : ""}
+              {'link2' in project ? <StyledButton text={project.link2.name} className="px-5" onClick={() => window.open(project.link2.link, '_blank')} /> : ""}
             </div>
           </div>
         )}

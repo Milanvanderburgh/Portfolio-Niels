@@ -11,14 +11,14 @@ const ProjectImage = ({ project }) => {
   ].filter(image => image !== null && image !== undefined);
 
   if (images.length === 1) {
-    return <img src={images[0]} width={700} />;
+    return <img src={images[0]} width={700} height={420} />;
   }
 
   return (
     <Carousel fade>
       {images.map((image, index) => (
         <Carousel.Item key={index}>
-          <img src={image} width={700} />
+          <img src={image} width={700} height={420} />
         </Carousel.Item>
       ))}
     </Carousel>
