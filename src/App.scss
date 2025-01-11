@@ -1,6 +1,6 @@
 // -- Variables --
-$mainColor: #49C5B6;
-$secondaryColor: #FF9398;
+$mainColor: #a56dee;
+$secondaryColor: #dfc9fd;
 $largeText: 1.5rem;
 $pagePadding: 200px;
 $shadowSize: 8px;
@@ -17,16 +17,22 @@ $mainPictureRotation: 13deg;
 
 // Global styles
 * {
-  color: white;
+  color: rgb(43, 40, 40);
 }
+
+.bg-black{
+  background-color: white !important;
+  }
 
 .mainColor {
   color: $mainColor;
 }
 
 .background {
-  background-color: black;
+  background-color: white;
 }
+
+
 
 .largeText {
   font-size: $largeText;
@@ -82,7 +88,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(57, 57, 57);
+  background: rgb(5, 5, 5);
   border-radius: 8px;
 }
 
@@ -125,7 +131,7 @@ body {
   cursor: pointer;
   scale: 0.95;
   transform: rotate(5deg);
-  color: white;
+  color: #a56dee;
   opacity: 0.4;
 }
 
@@ -272,7 +278,7 @@ body {
 #contactPage input,
 #contactPage textarea {
   width: 100%;
-  background-color: black;
+  background-color: #dfc9fd;
   border: solid 2px white;
   border-radius: 5px;
   padding: 5px;

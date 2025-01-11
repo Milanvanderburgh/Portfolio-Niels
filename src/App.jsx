@@ -7,7 +7,7 @@ import ProjectElement from './components/ProjectElement';
 import AboutElement from './components/AboutElement';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane, faUser, faPersonHiking, faMedal, faHouse, faHammer, faEnvelope, faCircleUser } from '@fortawesome/free-solid-svg-icons';
-import { faGithubSquare, faInstagramSquare, faLinkedin, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { faGithubSquare, faInstagramSquare, faLinkedin, } from '@fortawesome/free-brands-svg-icons';
 import data from './data.json';
 
 function App({ currentPage, setCurrentPage }) {
@@ -63,10 +63,10 @@ function App({ currentPage, setCurrentPage }) {
       {/* Home */}
       <div ref={homePage} id='homePage' className="page row">
         <div className="col-lg-6 d-flex flex-column justify-content-center gap-5">
-          <h1 className='title'>Achievement is built on <span className='mainColor fst-italic'>dedication</span> {currentPage.pageName} </h1>
+          <h1 className='title'>Dreams only work if you do <span className='mainColor fst-italic'>Dedication</span> {currentPage.pageName} </h1>
           <span>
-            <p className='largeText'>Hello, I am Milan van der Burgh a professional software developer!</p>
-            <p>I am 19 years old and live in Zeeland. I work critically and enjoy helping others. I'm currently studying to become a Software Developer because I love coding. My goal is to become a skilled Software Developer and create anything I need. My main hobbies are gaming, watching films, partying with friends, and going to the gym.</p>
+            <p className='largeText'>Hello, I am Niels Jansen, a professional software developer!</p>
+            <p>I am 21 years old and live in Zeeland. I work critically and enjoy helping others. I'm currently studying to become a Software Developer because I love coding. My goal is to become a skilled Software Developer and create anything I need. My main hobbies are gaming, watching films, partying with friends, and taking long walks with my dog.</p>
           </span>
           <StyledButton text="Let's talk" onClick={() => contactPage.current.scrollIntoView({ behavior: 'smooth' })} />
         </div>
@@ -120,10 +120,8 @@ function App({ currentPage, setCurrentPage }) {
             <h5>I'd love to hear from you!</h5>
           </span>
           <hr />
-          <div id='socials' className="d-flex justify-content-between px-5 mt-5">
+          <div id='socials' className="d-flex justify-content-center gap-5 px-5 mt-5">
             <FontAwesomeIcon icon={faLinkedin} fontSize={50} onClick={() => window.open(user.linkedIn, '_blank')} />
-            <FontAwesomeIcon icon={faGithubSquare} fontSize={50} onClick={() => window.open(user.github, '_blank')} />
-            <FontAwesomeIcon icon={faTwitterSquare} fontSize={50} onClick={() => window.open(user.twitter, '_blank')} />
             <FontAwesomeIcon icon={faInstagramSquare} fontSize={50} onClick={() => window.open(user.instagram, '_blank')} />
           </div>
         </div>
